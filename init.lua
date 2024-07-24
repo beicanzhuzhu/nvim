@@ -8,6 +8,6 @@ require ('lualine').setup({
         }    
 })
 local cfg = {}
-require "lsp_signature".setup(cfg)
+require('signature')
 require('nvim-cmp')
 require ('lsp')
