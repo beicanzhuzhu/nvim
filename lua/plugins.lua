@@ -31,11 +31,21 @@ require("lazy").setup({
 	end,
 	'chrisgrieser/cmp-nerdfont',
 	'onsails/lspkind.nvim',
-    'jiangmiao/auto-pairs',
     -- LSP manager
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 
-    'voldikss/vim-floaterm'
+    'windwp/nvim-autopairs',
+    event = "InsterEnter",
+    config = true,
+
+    'voldikss/vim-floaterm',
+
+    'ray-x/lsp_signature.nvim',
+    event = 'VeryLazy',
+    opts = {},
+    config = function(_,opts) 
+	    require'lsp_signature'.setup(opts) 
+    end
 })
 

@@ -15,6 +15,7 @@ cmp.setup({
     end,
     },
     mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         -- Use <C-b/f> to scroll the docs
         ['<C-b>'] = cmp.mapping.scroll_docs( -4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -69,3 +70,11 @@ cmp.setup({
     { name = 'path' }        -- For path completion
   })
 })
+
+require('nvim-autopairs').setup({
+  disable_filetype = { "TelescopePrompt" , "vim" },
+  ignored_next_char = "[%w%.]"
+})
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
