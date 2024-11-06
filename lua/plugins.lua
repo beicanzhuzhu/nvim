@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
 	'Mofiqul/vscode.nvim',
-
+    "kyazdani42/nvim-tree.lua",
+    event='VeryLazy',
 	'nvim-lualine/lualine.nvim',
     	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	

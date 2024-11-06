@@ -5,4 +5,5 @@ local opts = {
 }
 
 vim.keymap.set('n', '<C-t>', ':FloatermNew<CR>', opts)
-vim.keymap.set('n', '<C-r>', ':w<CR>',opts)
+vim.keymap.set('n', '<C-s>', ':w<CR>',opts)
+vim.keymap.set('n', '<A-m>', ':NvimTreeToggle<CR>', opts)

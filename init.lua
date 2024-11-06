@@ -11,3 +11,4 @@ local cfg = {}
 require('signature')
 require('nvim-cmp')
 require ('lsp')
+require ('nvim_tree')
