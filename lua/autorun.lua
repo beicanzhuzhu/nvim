@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
                 0,
                 "n",
                 "<F6>",
-                ":FloatermNew g++ -Wall -o %:t:r.out % && time ./%:t:r.out && echo -e \"\\n\\nPush any key to contiue...\" && read -n 1<CR><CR>",
+                ":FloatermNew g++ -Wall -o %:t:r.out % && time ./%:t:r.out && echo -e \"\\n\\nPush any key to contiue...\" && read -n 1<CR>",
                 {noremap = true }
             )
         end,
