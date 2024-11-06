@@ -18,11 +18,13 @@ if filetype == ".py":
     finally:
         pass
 elif filetype == ".cpp":
+    print("Compiling ...")
     try:
         subprocess.run(["g++", "-Wall", "-O2", "-std=c++20", filename,
                         "-o", outfile],
                        check=True)
     except subprocess.CalledProcessError:
+        input()
         exit()
     else:
         if sys.platform.startswith("linux"):
