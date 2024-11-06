@@ -15,3 +15,4 @@ lspconfig.pylsp.setup({
 	on_attach = on_attach,
 })
 lspconfig.clangd.setup({})
+lspconfig.lua_ls.setup({})
