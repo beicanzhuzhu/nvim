@@ -25,7 +25,10 @@ elif filetype == ".cpp":
     except subprocess.CalledProcessError:
         exit()
     else:
-        os.system("clear")
+        if sys.platform.startswith("linux"):
+            os.system("clear")
+        else:
+            os.system("cls")
         subprocess.run("./"+outfile)
         print("\n\nPush any key to contiue.")
         try:
