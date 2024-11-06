@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd("FileType", {
                 0,
                 "n",
                 "<F6>",
-                ":FloatermNew python "..path.."../py/autorun.py %:t<CR><CR>", 
+                ":FloatermNew python "..path.."../py/autorun.py %:t<CR>", 
                 {noremap = true }
             )
         end,

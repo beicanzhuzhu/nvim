@@ -13,7 +13,10 @@ outfile = os.path.splitext(filename)[0]+".out"
 if filetype == ".py":
     subprocess.run(["python", filename])
     print("\n\nPush any key to contiue.")
-    os.system("read -n 1")
+    try:
+        input()
+    finally:
+        pass
 elif filetype == ".cpp":
     try:
         subprocess.run(["g++", "-Wall", "-O2", "-std=c++20", filename,
@@ -25,6 +28,10 @@ elif filetype == ".cpp":
         os.system("clear")
         subprocess.run("./"+outfile)
         print("\n\nPush any key to contiue.")
-        os.system("read -n 1")
+        try:
+            input()
+        finally:
+            pass
+
 else:
     print("Unspport filetype.")
