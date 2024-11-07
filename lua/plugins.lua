@@ -18,6 +18,7 @@ require("lazy").setup({
     event='VeryLazy',
     'akinsho/bufferline.nvim',
 	'nvim-lualine/lualine.nvim',
+    'mhartington/formatter.nvim',
     	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	
 	--补全插件
