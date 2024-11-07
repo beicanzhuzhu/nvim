@@ -16,6 +16,7 @@ require("lazy").setup({
 	'Mofiqul/vscode.nvim',
     "kyazdani42/nvim-tree.lua",
     event='VeryLazy',
+    "akinsho/bufferline.nvim",
 	'nvim-lualine/lualine.nvim',
     	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	
