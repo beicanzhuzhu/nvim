@@ -17,6 +17,13 @@ lspconfig.pylsp.setup({
 lspconfig.clangd.setup({})
 lspconfig.rust_analyzer.setup({
     settings={
-    ["rust-analyzer"] ={},
+    ["rust-analyzer"] ={
+            cargo = {
+                allFeatures = true,
+            },
+            diagnostics = {
+                enable = true,
+            },
+        },
     },
 })
