@@ -15,3 +15,8 @@ lspconfig.pylsp.setup({
 	on_attach = on_attach,
 })
 lspconfig.clangd.setup({})
+lspconfig.rust_analyzer.setup({
+    settings={
+    ["rust-analyzer"] ={},
+    },
+})
